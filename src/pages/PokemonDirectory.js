@@ -6,6 +6,7 @@ const PokemonDirectory = () => {
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [limit, setLimit] = useState(20);
   const [searchResults, setSearchResults] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
 
   useEffect(() => {
     const fetchPokemonData = () => {
@@ -47,6 +48,8 @@ const PokemonDirectory = () => {
   };
 
   const handleSearch = (searchTerm) => {
+    setIsSearching(true);
+
     const filteredPokemonList = pokemonList.filter((pokemon) =>
       pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -60,13 +63,16 @@ const PokemonDirectory = () => {
       <SearchBar onSearch={handleSearch} />
       <div className="pokemon-list">
         {displayList.map((pokemon) => (
-          <div key={pokemon.name} className="pokemon-card">
+          <div
+            key={pokemon.name}
+            className="pokemon-card"
+            onClick={() => handlePokemonClick(pokemon)}
+          >
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
                 pokemon.url.split("/")[6]
               }.png`}
               alt={pokemon.name}
-              onClick={() => handlePokemonClick(pokemon)}
             />
             <div className="pokemon-details">
               {selectedPokemon === pokemon && (
@@ -80,7 +86,7 @@ const PokemonDirectory = () => {
                     ))}
                   </ul>
                   <p>
-                    Types:{" "}
+                    Type:{" "}
                     {pokemon.types.map((type) => (
                       <span key={type.type.name}>{type.type.name}</span>
                     ))}
@@ -91,9 +97,12 @@ const PokemonDirectory = () => {
           </div>
         ))}
       </div>
-      <button onClick={handleLoadMore}>Load More</button>
+      {!isSearching && <button onClick={handleLoadMore}>Load More</button>}
     </div>
   );
 };
 
 export default PokemonDirectory;
+
+
+
