@@ -1,87 +1,100 @@
+
+/* styling for the body element */
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: red;
-  }
-  
-  .pokemon-directory {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .pokemon-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .pokemon-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 200px;
-    background-color: lightgray;
-  }
-  
-  .pokemon-card img {
-    width: 150px;
-    height: 150px;
-    cursor: pointer;
-  }
-  
-  .pokemon-details {
-    margin-top: 10px;
-  }
-  
-  .pokemon-details h2 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .pokemon-details ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .pokemon-details li {
-    margin-bottom: 5px;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    border-radius: 10px;
-    color: white;
-    padding: 15px;
-    font-size: 2em;
-  }
-  
-  .nav a {
-    color: white;
-    text-decoration: none;
-   
-  }
-  
-  h1{
-    text-align: center;
-    background-color: whitesmoke;
-    border-radius: 10px;
-  }
-  
-  .img {
-    display: flex;
-  
-    border-radius: 10px;
-    width: 100%;
-  }
-  
-.about{
-    background-color:white;
-    text-align: center;
-    border-radius: 10px;
+  background-color: red;
+}
+
+/* styling for the pokemon directory */
+.pokemon-directory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* tyling for the pokemon list */
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* styling for the pokemon card */
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 200px;
+  background-color: lightgray;
+}
+
+/* styling for the pokemon card image */
+.pokemon-card img {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+/* styling for the pokemon details */
+.pokemon-details {
+  margin-top: 10px;
+}
+
+/* styling for the pokemon details heading */
+.pokemon-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* styling for the pokemon details unordered list */
+.pokemon-details ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* styling for the pokemon details list items */
+.pokemon-details li {
+  margin-bottom: 5px;
+}
+
+/* styling for the navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+}
+
+/* styling for the navigation bar links */
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* styling for the heading */
+h1 {
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+/* styling for the image */
+.img {
+  display: flex;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* styling for the about section */
+.about {
+  background-color: white;
+  text-align: center;
+  border-radius: 10px;
 }
